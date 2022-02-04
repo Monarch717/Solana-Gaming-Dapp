@@ -1,0 +1,10 @@
+@font-face {
+  font-family: snakeFont;
+  src: url(assets/fonts/snake.ttf);
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

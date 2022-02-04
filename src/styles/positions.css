@@ -1,0 +1,14 @@
+.fixed-bottom-10 {
+  position: fixed;
+  bottom: 10px;
+}
+
+.fixed-left {
+  position: fixed;
+  left: 0;
+}
+
+.relative-right {
+  position: relative;
+  right: 0;
+}

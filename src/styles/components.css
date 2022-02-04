@@ -1,0 +1,76 @@
+input {
+  color: white;
+  font-family: snakeFont;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  transition: 1s;
+  font-size: 24px;
+}
+
+input[type='button'] {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input:active {
+  outline: none;
+}
+
+
+.card {
+  border-radius: 10px;
+  background-color: #21234E;
+  border: 1px solid #373973;
+  font-size: 10px;
+  padding: 20px;
+}
+
+.card-header {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #373973;
+  font-weight: bold;
+}
+
+.card-footer {
+
+}
+
+.card-body {
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.button-primary {
+  height: 36px;
+  width: 105px;
+  background-color: #21234E;
+  color: white;
+  border: 1px solid #373973;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.control-pan {
+  height: 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 10px;
+}
+
+.text-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

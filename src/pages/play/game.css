@@ -1,0 +1,505 @@
+.app-bg {
+  /*background-color: #578a34;*/
+  height: 100%;
+  min-width: 100%;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+}
+
+.full-height {
+  height: 100%;
+}
+
+body {
+  background-color: #282c34;
+  overscroll-behavior: contain;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.border {
+  border: #3c6023 1px solid;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 1px 80px rgb(0 0 0 / 12%);
+  background: #0000004a;
+}
+
+.titleContainer {
+  width: 100%;
+  padding-right: 10px;
+  /*background-color: #4a752c;*/
+}
+
+.scoreContainer {
+  width: 20%;
+  padding-left: 10px;
+}
+
+.title {
+  font-family: snakeFont;
+  font-weight: bold;
+  color: #fff;
+  font-size: 45pt;
+  width: 100%;
+  min-height: 80px;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+  user-select: none;
+  padding: 0 1rem;
+}
+
+.score {
+  font-family: snakeFont;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 40pt;
+  width: 100%;
+  min-height: 50px;
+  height: 50px;
+  user-select: none;
+}
+
+.best-score {
+  font-family: snakeFont;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15pt;
+  width: 100%;
+  min-height: 30px;
+  height: 30px;
+  user-select: none;
+  position: relative;
+  top: -1px;
+}
+
+.subTitle {
+  color: rgb(167, 167, 167);
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 20pt;
+  width: 100%;
+  background-image: url(./img/board-bg.png);
+  background-size: cover;
+}
+
+.gameover-overlay {
+  height: 400px;
+  position: relative;
+  top: -424px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34a5;
+}
+
+.game-over-text {
+  font-family: snakeFont;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  font-size: 80pt;
+  color: #61dafb;
+  user-select: none;
+  text-align: center;
+}
+
+.menu-overlay {
+  height: 400px;
+  position: relative;
+  top: -424px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background-image: url('./img/gbg.png');*/
+  background-position: center;
+  background-size: cover;
+}
+
+.snakeButton {
+  cursor: pointer;
+  font-family: snakeFont;
+  font-weight: bold;
+  font-size: 25pt;
+  color: #61dafb;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: 0.5px solid #61dafb;
+  background-color: #282c34;
+  user-select: none;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06), 0 1px 80px rgba(0, 0, 0, 0.12);
+}
+
+.snakeButton:hover {
+  color: #282c34;
+  background-color: #61dafb;
+}
+
+.board-cell {
+  display: flex;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+
+.board-cell.odd {
+  background-color: #a1d048;
+}
+
+.board-cell.even {
+  background-color: #a9d750;
+}
+
+.snake-body {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img/dbody.png);
+  border-radius: 10px;
+}
+
+.go {
+  text-align: center;
+  align-self: center;
+  display: flex;
+}
+
+.go img {
+  width: 20%;
+  margin: auto;
+}
+
+.snake-head {
+  background-image: url('./img/dhead.png');
+  /*border-radius: 45%;*/
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+}
+
+.snake-head.R {
+  transform: rotate(0deg);
+}
+
+.snake-head.T {
+  transform: rotate(270deg);
+}
+
+.snake-head.B {
+  transform: rotate(90deg);
+}
+
+.snake-head.L {
+  transform: rotate(180deg);
+}
+
+.snake-food {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.snake {
+  background: url(./img/snake.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blueberry {
+  background: url(./img/blueberry.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cherry {
+  background: url(./img/cherry.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grapes {
+  background: url(./img/grapes.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.raspberry {
+  background: url(./img/raspberry.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.strawberry {
+  background: url(./img/strawberry.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.invert {
+  transform: scaleX(-1);
+}
+
+.fork {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  opacity: 0.5;
+  transition: opacity ease-in 0.1s;
+}
+
+.fork:hover {
+  opacity: 1;
+}
+
+.fork:active {
+  opacity: 0.3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Mobile */
+@media (min-width: 0) {
+  .container {
+    width: 293px;
+    height: 324px;
+  }
+
+  .board-cell {
+    width: 14.5px;
+    height: 14.5px;
+    min-width: 14.5px;
+  }
+
+  .snake-body {
+    /* border-radius: 3px; */
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/dbody.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+
+
+  .game-board {
+    width: 296px;
+  }
+
+  .menu-food {
+    width: 30px;
+    height: 30px;
+  }
+
+  .gameover-overlay,
+  .menu-overlay {
+    height: 218px;
+    top: -240px;
+  }
+
+  .game-over-text {
+    font-size: 40pt;
+  }
+
+  .snakeButton {
+    font-size: 15pt;
+    padding: 6px 10px;
+  }
+
+  .scoreContainer {
+    width: 30%;
+  }
+
+  .best-score {
+    font-size: 14pt;
+  }
+
+  .subTitle {
+    font-size: 12pt;
+  }
+}
+
+/* Desktop */
+@media (min-width: 969px) {
+  .container {
+    width: 602px;
+    height: 555px;
+  }
+
+  .game-board .snake-body:nth-child(2) {
+    border-radius: 50% !important;
+  }
+
+  .snake-body {
+    /* border-radius: 10px; */
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/dbody.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+
+  .board-cell {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    /*background-image: url('./img/tiles.png');*/
+    background-position: center;
+    background-size: contain;
+  }
+
+  /* .board-cell:nth-of-type(odd) {
+      background-color: #000;
+  }
+
+  .board-cell:nth-of-type(even) {
+      background-color: #fff;
+  } */
+  .game-board {
+    width: 604px;
+  }
+
+  .menu-food {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .gameover-overlay,
+  .menu-overlay {
+    height: 450px;
+    top: -462px;
+  }
+
+  .game-over-text {
+    margin-bottom: 5px;
+    font-size: 80pt;
+  }
+
+  .snakeButton {
+    font-size: 25pt;
+  }
+
+  .best-score {
+    font-size: 18pt;
+  }
+
+  .subTitle {
+    font-size: 14pt;
+  }
+}
+
+.mbPNob {
+  width: 120px;
+  height: 120px;
+  background-image: url(//www.google.com/logos/fnbx/snake_arcade/keys.svg);
+  background-size: 100px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  position: relative;
+  top: 33%;
+  transform: translateY(-50%);
+  display: block;
+  margin: auto;
+  user-select: none;
+}
+
+.playagain-btn {
+  background: #15c;
+  height: 64px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 12px 0 0 6px;
+  padding: 0 1rem;
+}
+
+.playagain-btn img {
+  vertical-align: middle;
+  margin: 0 6px 2px -5px;
+  width: 30px;
+  height: 30px;
+}
+
+.playagain-btn h2 {
+  font: 400 20px Roboto, Arial, sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.pr-3 {
+  padding-right: 1rem;
+}
+
+.head-icons {
+  vertical-align: middle;
+  padding-right: .5rem;
+  width: 80px;
+}
+
+.sound-icon {
+  vertical-align: middle;
+}
+
+.sound-icon-container {
+  float: right;
+}

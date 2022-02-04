@@ -1,0 +1,141 @@
+.hover-primary:hover {
+  background: linear-gradient(95.58deg, #3E66F4 0%, #3E66F4 100%), #121215;
+  color: white;
+}
+
+.hover-info:hover {
+  background: linear-gradient(91.94deg, #67FFBC 0%, #A0FED4 100%);
+  color: #323232;
+}
+
+.hover-warning:hover {
+  background: #de7112;
+  color: #323232;
+}
+
+.hover-danger:hover {
+  background: #FF1D1D;
+}
+
+.primary {
+  color: #8b9fef;
+}
+
+.info, .success {
+  color: #67FFBC;
+}
+
+.warning {
+  color: #de7112;
+}
+
+.danger {
+  color: #FF0D0D;
+}
+
+.bg-default {
+  background-color: #0D0C10 !important;
+}
+
+.hover-primary:hover {
+  background-color: #506CCB;
+  color: white;
+}
+
+.hover-info:hover {
+  background: linear-gradient(91.94deg, #50CB6B 0%, #A0FED4 100%);
+  color: #323232;
+}
+
+.hover-warning:hover {
+  background: #de7112;
+  color: #323232;
+}
+
+.hover-danger:hover {
+  background: linear-gradient(98.41deg, #FF1D1D 0%, #FF5555 100%);
+}
+
+.error {
+  color: #ff1d1d;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.black {
+  color: #000;
+}
+
+.green-dark {
+  color: #2F8532;
+}
+
+.disabled {
+  color: #898AA9;
+}
+
+.bg-default {
+  background-color: #19181D !important;
+}
+
+.bg-dark {
+  background-color: #161836 !important;
+}
+
+.bg-light {
+  background-color: #131424 !important;
+}
+
+.bg-lighter {
+  background-color: #37375f !important;
+}
+
+.bg-primary {
+  background-color: #650ac5 !important;
+}
+
+.bg-info {
+  background-color: #50CB6B !important;
+}
+
+.bg-warning {
+  background-color: #de4c12 !important;
+}
+
+.bg-danger {
+  background-color: #FF0D0D !important;
+}
+
+.bg-trans {
+  background-color: transparent !important;
+}
+
+.bg-trans-white-1 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.bg-trans-white-2 {
+  background-color: rgba(255, 255, 255, 0.37) !important;
+}
+
+.bg-trans-info {
+  background-color: #50CB6B22;
+}
+
+.bg-trans-primary {
+  background-color: #21234E32;
+}
+
+.bg-trans-primary {
+  /*background-color: #506CCB32;*/
+}
+
+.bg-trans-danger {
+  background-color: #B9362D22;
+}
+
+a, a:active {
+  color: inherit;
+}
